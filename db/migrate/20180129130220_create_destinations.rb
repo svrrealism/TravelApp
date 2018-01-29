@@ -3,7 +3,7 @@ class CreateDestinations < ActiveRecord::Migration[5.1]
     create_table :destinations do |t|
       t.string :name
       t.string :image
-      t.description :description
+      t.string :description
       t.references :tag
       t.timestamps
     end
