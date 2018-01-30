@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/tags' => 'tags#index'
   #Name your routes with 'as' function the 'some_arbitrary_tag'
   get '/tags/:id' => 'tags#show', as: :tag
+  get '/destinations/:id' => 'destinations#show', as: :destination
 end
