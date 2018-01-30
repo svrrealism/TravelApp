@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   #Name your routes with 'as' function the 'some_arbitrary_tag'
   get '/tags/:id' => 'tags#show', as: :tag
   get '/destinations/:id' => 'destinations#show', as: :destination
+  get '/destinations/:id/edit' => 'destinations#edit', as: :edit_destination
+  patch '/destinations/:id' => 'destinations#update', as: :update_destination
+  
 end
