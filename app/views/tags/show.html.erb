@@ -5,19 +5,21 @@
   </div>
 </div>
 
-<div class="tags">
+<div class="tag">
   <div class="container">
+    <h2 class="tag-title"><%= @tag.title %></h2>
+
     <div class="cards row">
 
-      <% @tags.each do |tag| %>
+      <% @tag.destinations.each do |d| %>
       <div class="card col-xs-4">
-        <img src="<%= tag.image %>">
-        <h2> <%= tag.title %></h2>
-        <!--The bottom tag_path comes from :tag we specified in in the routes file  -->
-        <%= link_to "Learn More", tag_path(tag) %>
+        <img src="<%= d.image %>">
+        <h2><%= d.name %></h2>
+        <p><%= d.description %></p>
       </div>
       <% end %>
 
     </div>
+
   </div>
 </div>
